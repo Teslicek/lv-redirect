@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join LeafVanilla</title>
+  <link rel="icon" href="favicon.ico">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #161616;
+      font-family: system-ui, sans-serif;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    img { max-width: 200px; }
+    button {
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid #000;
+      background: #f2f2f2;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    const join = () =>
+      location.href = 'minecraft://acceptRealmInvite?inviteID=sCgubzhAAUaDYoY/';
+    window.onload = join;
+  </script>
+</head>
+<body>
+  <div class="stack">
+    <img src="logo.png" alt="LeafVanilla">
+    <button onclick="join()">Join LeafVanilla</button>
+  </div>
+</body>
+</html>
