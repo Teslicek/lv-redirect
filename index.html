@@ -19,9 +19,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      text-align: center;
+      max-width: 320px;
     }
     img { max-width: 200px; }
+
     button {
       padding: 12px 20px;
       font-size: 20px;
@@ -31,18 +34,37 @@
       background: #f2f2f2;
       cursor: pointer;
     }
+
+    .hint {
+      font-size: 14px;
+      color: #cfcfcf;
+      line-height: 1.4;
+    }
+
+    .ip {
+      font-family: monospace;
+      color: #ffffff;
+      user-select: all;
+    }
   </style>
 
   <script>
     const join = () =>
-      location.href = 'minecraft://acceptRealmInvite?inviteID=sCgubzhAAUaDYoY/';
+      location.href = 'minecraft://acceptRealmInvite?inviteID=4TmLrnUtSXVXj2Q/';
     window.onload = join;
   </script>
 </head>
 <body>
   <div class="stack">
     <img src="logo.png" alt="LeafVanilla">
-    <button onclick="join()">Join LeafVanilla</button>
+
+    <button onclick="join()">Join Bedrock Realm</button>
+
+    <div class="hint">
+      Java Edition:<br>
+      Multiplayer → Add Server<br>
+      Address: <span class="ip">java.leafvanilla.net</span>
+    </div>
   </div>
 </body>
 </html>
